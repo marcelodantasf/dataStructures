@@ -15,7 +15,7 @@ void init(pilha *p, int cap){
 }
 
 void list(pilha *p) {
-    printf("Queue:\n");
+    printf("Stack:\n");
     for(int i = 0; i < p->topo+1; i++) {
         printf("[%d] ",*(p->dados+i));
     }
@@ -32,20 +32,8 @@ int insert(pilha *p, int valor){
         printf("ERROR!\nNo space available\n");
         return -1;
     }
-    int i = 0;
-    int *aux;
-    aux = calloc(p->capacidade, sizeof(int));
-    // copiar todo o conteudo de *dados em *aux
-    while(i < p->topo + 1) {
-        *(aux + i) = *(p->dados + i);
-        i++;
-    }
-    i = 0;
-    *p->dados = valor;
-    while(i < p->topo + 1){
-        *(p->dados+i+1) = *(aux+i);
-        i++;
-    }
+    int i = p->topo + 1;
+    *(p->dados + i) = valor;
     printf("Value [%d] added to stack!\n", valor);
     p->topo += 1;
 }
@@ -69,5 +57,6 @@ int main(){
     list(&stack);
     delete(&stack);
     list(&stack);
+    free_all(&stack);
     exit(0);
 }
