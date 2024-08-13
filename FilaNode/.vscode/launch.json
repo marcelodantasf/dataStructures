@@ -7,9 +7,9 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "externalConsole": true,
+      "cwd": "c:/Users/adora/OneDrive/Documentos/projetos/dataStructures/FilaNode",
+      "program": "c:/Users/adora/OneDrive/Documentos/projetos/dataStructures/FilaNode/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
