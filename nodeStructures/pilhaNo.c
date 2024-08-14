@@ -69,7 +69,7 @@ void list(no* p) {
 
     no* getter = p;
 
-    printf("Reading:\n");
+    printf("\nReading:\n");
     while(getter){
         printf("[id: %d] [name: %s]\n", getter->d.id, getter->d.name);
         getter = getter->prox;
